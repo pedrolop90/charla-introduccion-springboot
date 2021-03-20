@@ -20,11 +20,14 @@
 
 ### Seleccionar JDK
 a. Seleccionamos la opción, file > Project Structure
+
   ![](https://firebasestorage.googleapis.com/v0/b/testing-266823.appspot.com/o/project-structured-1.png?alt=media&token=5f2c0420-e18d-49b1-909d-df259b00e27c)
 b. Si tenemos java 11 instalado solo lo seleccionamos y ya podemos continuar con la ejecución
 c. Si no lo tenemos instalado, elegimos la opción descargar JDK
+
   ![](https://firebasestorage.googleapis.com/v0/b/testing-266823.appspot.com/o/project-structured-2.png?alt=media&token=c24ff04e-cfd9-4722-826a-dbe9ec549575)
 d. Elegimos java 11 y la versión de adoptOpenJDK
+
   ![](https://firebasestorage.googleapis.com/v0/b/testing-266823.appspot.com/o/project-structured-3.png?alt=media&token=ab6cff77-6fb0-4f7b-b1e8-ef8917a85597)
 
 
