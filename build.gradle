@@ -1,0 +1,31 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.4.RELEASE'
+    id 'application'
+}
+
+group 'org.charla.introduccion.springframework'
+version '1.0-SNAPSHOT'
+
+project.ext.nameClassMain = "org.charla.introduccion.springframework.IntroduccionApp";
+
+sourceCompatibility = '8'
+targetCompatibility = '8'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    runtimeOnly 'com.h2database:h2:1.4.200'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.3.4.RELEASE'
+
+
+}
+
+mainClassName = project.ext.nameClassMain
