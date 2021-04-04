@@ -13,4 +13,11 @@ public interface PersonaService {
 	PersonaEntity actualizar(PersonaEntity personaEntity);
 
 	void delete(Long idPersona);
+
+	List<PersonaEntity> busquedaPorNombre(String nombre);
+
+	List<PersonaEntity> busquedaPorLike(String nombre);
+
+	List<PersonaEntity> busquedaPorLikeAndId(String nombre, Long id);
+
 }

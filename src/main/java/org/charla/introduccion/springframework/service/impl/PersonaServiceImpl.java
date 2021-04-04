@@ -36,4 +36,19 @@ public class PersonaServiceImpl implements PersonaService {
 	public void delete(Long idPersona) {
 		personaRepository.deleteById(idPersona);
 	}
+
+	@Override
+	public List<PersonaEntity> busquedaPorNombre(String nombre) {
+		return personaRepository.findByNombre(nombre);
+	}
+
+	@Override
+	public List<PersonaEntity> busquedaPorLike(String nombre) {
+		return personaRepository.findByNombreLike("%" + nombre + "%");
+	}
+
+	@Override
+	public List<PersonaEntity> busquedaPorLikeAndId(String nombre, Long id) {
+		return personaRepository.findByNombreLikeAndId("%" + nombre + "%", id);
+	}
 }

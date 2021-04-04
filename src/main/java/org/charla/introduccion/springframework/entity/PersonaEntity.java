@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity(name = "persona")
 public class PersonaEntity {
@@ -15,6 +17,9 @@ public class PersonaEntity {
 
 	@Column
 	private String nombre;
+
+	@OneToMany
+	private List<DireccionEntity> direcciones;
 
 	public PersonaEntity() {
 	}
