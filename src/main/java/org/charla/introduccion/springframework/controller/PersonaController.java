@@ -47,6 +47,21 @@ public class PersonaController {
 	// DELETE "localhost:8090/personas/idPersona"
 	@DeleteMapping(path = "/{idPersona}")
 	public void eliminar(@PathVariable Long idPersona) {
-		 personaService.delete(idPersona);
+		personaService.delete(idPersona);
+	}
+
+	@GetMapping(path = "/nombre/{nombre}")
+	public List<PersonaEntity> busquedaPorNombre(@PathVariable String nombre) {
+		return personaService.busquedaPorNombre(nombre);
+	}
+
+	@GetMapping(path = "/nombre/like/{nombre}")
+	public List<PersonaEntity> busquedaPorLike(@PathVariable String nombre) {
+		return personaService.busquedaPorLike(nombre);
+	}
+
+	@GetMapping(path = "/nombre/id/{nombre}/{id}")
+	public List<PersonaEntity> busquedaPorLikeAndId(@PathVariable String nombre, @PathVariable Long id) {
+		return personaService.busquedaPorLikeAndId(nombre, id);
 	}
 }
